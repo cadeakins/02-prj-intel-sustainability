@@ -69,7 +69,7 @@ section > div {
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   padding: 1rem;
-  min-width: 220px;
+  min-width: 320px;
   max-width: 320px;
   margin: 0 auto;
   position: relative;
@@ -152,11 +152,16 @@ section h3 {
 }
 
 section img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 8px;
+  width: 200px;         /* Set a fixed width for all images */
+  height: 120px;        /* Set a fixed height for all images */
+  max-width: 200px;     /* Prevent images from getting larger than this */
+  min-width: 200px;     /* Prevent images from getting smaller than this */
+  min-height: 120px;    /* Prevent images from getting smaller than this */
+  max-height: 120px;    /* Prevent images from getting larger than this */
+  border-radius: 8px;   /* Rounded corners for style */
   margin: 0.5rem 0;
-  object-fit: cover;
+  object-fit: cover;    /* Crop images to fill the box, keeping them neat */
+  display: block;       /* Remove extra space below images */
 }
 
 /* 4. Hide card description by default, show on hover */

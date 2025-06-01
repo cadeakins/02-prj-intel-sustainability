@@ -1,5 +1,3 @@
-
-
 /*
   Intel Sustainability Timeline Styles
   - Mobile-first, responsive design
@@ -14,7 +12,6 @@
 body {
   font-family: 'Roboto', Arial, sans-serif; /* Clean, modern font */
   background: #f5f7fa; /* Light background */
-  color: #003c71; /* Intel blue for text */
   margin: 0;
   padding: 0;
 }
@@ -32,15 +29,28 @@ header img {
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 3rem; /* Make the title much bigger */
   margin: 0.5rem 0;
-  font-weight: 700;
+  font-weight: 800; /* Make the title extra bold */
 }
 
 header p {
   font-size: 1rem;
-  margin: 0.5rem 0 0 0;
-  color: #e3eaf3;
+  margin: 2rem auto 2rem auto; /* This centers the paragraph block */
+  text-align: center;          /* This centers the text inside the paragraph */
+  color: #fff;                 /* White text for good contrast */
+  max-width: 600px;            /* Limit width for readability */
+}
+
+/* Stylish blue gradient divider for header */
+header hr {
+  border: none; /* Removes the default border */
+  height: 5px; /* Makes the divider thicker */
+  width: 80px; /* Sets the divider width */
+  margin: 1.5rem auto; /* Adds space above and below, centers the divider */
+  border-radius: 3px; /* Rounds the edges */
+  background: linear-gradient(90deg, #00baff, #b6e9ff 70%); /* Blue gradient for Intel style */
+  box-shadow: 0 2px 8px rgba(0,104,181,0.15); /* Soft blue shadow for depth */
 }
 
 /* 2. Timeline Section Styles */
@@ -183,7 +193,7 @@ section > div p {
 /* 6. Responsive: Make text larger on big screens */
 @media (min-width: 1000px) {
   header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   section h2 {
     font-size: 1.5rem;
@@ -194,7 +204,8 @@ section > div p {
 }
 
 /* 7. Add a little instruction styling */
-p:last-of-type {
+.instructions {
+  font-family: 'Roboto', Arial, sans-serif;
   text-align: center;
   color: #0068b5;
   font-size: 1rem;
